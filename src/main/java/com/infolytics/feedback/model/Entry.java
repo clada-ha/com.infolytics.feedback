@@ -53,11 +53,5 @@ public class Entry {
         this.diaryMode = diaryMode;
     }
 
-    public void modifyEntry() {
-        // TODO UPDATE saved entry in DB
-    }
 
-    public void removeEntry() {
-        // TODO DELETE saved entry from DB
-    }
 }
