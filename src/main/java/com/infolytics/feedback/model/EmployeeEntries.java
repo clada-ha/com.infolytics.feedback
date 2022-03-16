@@ -13,9 +13,9 @@ public class EmployeeEntries {
         entries = new ArrayList<>();
     }
 
-    public EmployeeEntries(Employee employee) {
+    public EmployeeEntries(Employee employee) {     // TODO constructor besser verstehen
         this();
-        setEmployeeIdentifier(employee.getIdentifier()); // TODO besser verstehen
+        setEmployeeIdentifier(employee.getIdentifier());
     }
 
 

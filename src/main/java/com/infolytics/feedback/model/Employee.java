@@ -12,7 +12,7 @@ public class Employee {
     public Employee(String firstname, String lastname, String identifier) {
         this.firstname = firstname;
         this.lastname = lastname;
-        this.identifier = identifier;
+        this.identifier = identifier; // TODO add check for valid mail address
     }
 
     public Employee(String identifier) {
