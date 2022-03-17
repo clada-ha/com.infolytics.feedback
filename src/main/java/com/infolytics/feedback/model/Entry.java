@@ -9,8 +9,9 @@ public class Entry {
     private String entry;
     private String identifierEmployee;
     private LocalDate entryDate; //default = heute; aber anpassbar
-    private LocalTime timestamp; // default = jetzt, aber anpassbar
-    // TODO better use LocalDateTime?
+    private LocalTime timestamp; // default = jetzt; aber anpassbar
+
+    // TODO better use LocalDateTime? >> see DateTimeFormatter.ofPattern
     private boolean diaryMode; // true: DiaryEntry, false: FeedbackEntry
 
     // constructors
