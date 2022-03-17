@@ -6,6 +6,7 @@ import java.util.List;
 public class EmployeeEntries {
     private final List<Entry> entries; // TODO check if final makes sense
     private String employeeIdentifier;
+    private int entryCounter = 0; // pruefen, ob sinnvoll?
 
 
     // constructors
@@ -27,6 +28,8 @@ public class EmployeeEntries {
 
     public void addEntry(Entry entry) {
         entries.add(entry);
+        entryCounter++;
+        // increment a counter to later add it to filename?
     }
 
 

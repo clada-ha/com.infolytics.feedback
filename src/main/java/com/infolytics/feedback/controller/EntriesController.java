@@ -12,18 +12,20 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 public class EntriesController {
-    public static void printEntries(EmployeeEntries prints) {
+    public void printEntries(EmployeeEntries prints) { // static?
         System.out.println("employee ID: " + prints.getEmployeeIdentifier());
 
         for (Entry entry : prints.getEntries()) {
             LocalDate entryDate = entry.getEntryDate();
             LocalTime timestamp = entry.getTimestamp();
             DateTimeFormatter formatDateObj = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+            DateTimeFormatter formatTimeObj = DateTimeFormatter.ofPattern("HH:mm");
 
             String formattedDate = entryDate.format(formatDateObj);
+            String formattedTime = (timestamp.format(formatTimeObj) + " Uhr");
 
-            System.out.printf("date of entry: %s\n", formattedDate);
-            System.out.println(entry.getTimestamp());
+            System.out.printf("Datum des Eintrags: %s\n", formattedDate);
+            System.out.println("Uhrzeit: " + formattedTime);
             System.out.println(entry);
         }
     }
@@ -39,6 +41,7 @@ public class EntriesController {
 //
 //    public void modifyEntry() {
 //        // TODO UPDATE saved entry in DB
+//        // TODO how to modify entries in txt files? (StringBuilder?)
 //        // use try w resources?
 //    }
 //
