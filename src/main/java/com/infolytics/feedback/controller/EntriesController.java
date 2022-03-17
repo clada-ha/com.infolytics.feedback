@@ -25,7 +25,7 @@ public class EntriesController {
             String formattedTime = (timestamp.format(formatTimeObj) + " Uhr");
 
             System.out.printf("Datum des Eintrags: %s\n", formattedDate);
-            System.out.println("Uhrzeit: " + formattedTime);
+            System.out.printf("Uhrzeit: %s\n\n", formattedTime);
             System.out.println(entry);
         }
     }
@@ -34,20 +34,7 @@ public class EntriesController {
 
 
 
-//    public Entry retrieveEntry() {
-//        // TODO call entry from local file
-//        // try w resources?
-//    }
-//
-//    public void modifyEntry() {
-//        // TODO UPDATE saved entry in DB
-//        // TODO how to modify entries in txt files? (StringBuilder?)
-//        // use try w resources?
-//    }
-//
-//    public void removeEntry() {
-//        // TODO DELETE saved entry from DB
-//    }
+
 
     // TODO save entries in txt file (BufferedWriter, BufferedReader)
 

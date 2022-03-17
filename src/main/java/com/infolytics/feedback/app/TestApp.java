@@ -25,10 +25,22 @@ public class TestApp {
 
         Entry entry2 = new Entry("test two, with specified timestamp", LocalDate.of(2022, 03, 16), LocalTime.now(), false);
         System.out.println(" timestamp: " + entry2.getTimestamp() + ", date: " + entry2.getEntryDate());
+        entry2.setIdentifierEmployee("ch@info.com");
+        Entry entry3 = new Entry("test entry3");
+//
+//        entry1.saveEntry(entry1);
+//        entry1.retrieveEntry("entry_2022-03-16");
 
-        entry1.saveEntry(entry1);
-        entry1.retrieveEntry("entry_2022-03-16");
+        EmployeeEntries employeeEntries1 = new EmployeeEntries();
+//        employeeEntries1.addEntry(entry1);
+        employeeEntries1.addEntry(entry2);
+        employeeEntries1.setEmployeeIdentifier(entry2.getIdentifierEmployee());
+//        employeeEntries1.getEntries();
 
+        System.out.println("EmployeeEntries: " + employeeEntries1.getEmployeeIdentifier());
+
+//        EntriesController entriesContr1 = new EntriesController();
+//        entriesContr1.printEntries("clda");
 
 
     }

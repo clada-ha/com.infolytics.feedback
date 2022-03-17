@@ -6,7 +6,7 @@ import java.util.List;
 public class EmployeeEntries {
     private final List<Entry> entries; // TODO check if final makes sense
     private String employeeIdentifier;
-    private int entryCounter = 0; // pruefen, ob sinnvoll?
+    private int entryCounter; // pruefen, ob sinnvoll?
 
 
     // constructors

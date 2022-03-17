@@ -11,7 +11,7 @@ public class Entry {
     private LocalDate entryDate; //default = heute; aber anpassbar
     private LocalTime timestamp; // default = jetzt, aber anpassbar
     // TODO better use LocalDateTime?
-    private boolean diaryMode; // privater oder oeffentlicher Eintrag
+    private boolean diaryMode; // true: DiaryEntry, false: FeedbackEntry
 
     // constructors
     public Entry() {
@@ -33,7 +33,7 @@ public class Entry {
         this(entry, LocalDate.now(), LocalTime.now(), true); // TODO korrekte Zeit des Eintrags einfuegen, check SimpleDateFormat
     }
 
-    // METHODS
+    // METHODS // TODO write & retrieve: here or in EntriesController?
     // write into local file
     public void saveEntry(Entry entry) { //  useful parameter variable
         String entryFilename = entry.getEntryDate().toString();
@@ -59,6 +59,21 @@ public class Entry {
             e.printStackTrace();
         }
     }
+
+    //    public Entry retrieveEntry() {
+//        // TODO call entry from local file
+//        // try w resources?
+//    }
+//
+//    public void modifyEntry() {
+//        // TODO UPDATE saved entry in DB
+//        // TODO how to modify entries in txt files? (StringBuilder?)
+//        // use try w resources?
+//    }
+//
+//    public void removeEntry() {
+//        // TODO DELETE saved entry from DB
+//    }
 
     // getter, setter
     public String getEntry() {
