@@ -5,11 +5,13 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
-public class Entry {
+public abstract class Entry {
     private String entry;
     private String identifierEmployee;
     private LocalDate entryDate; //default = heute; aber anpassbar
     private LocalTime timestamp; // default = jetzt; aber anpassbar
+    private boolean diaryMode; // TODO check if Wrapper class Boolean makes more sense
+    private String taskURL;
 
     // TODO better use LocalDateTime? >> see DateTimeFormatter.ofPattern
     private boolean diaryMode; // true: DiaryEntry, false: FeedbackEntry

@@ -34,9 +34,4 @@ public class EntriesController {
 
 
 
-
-
-    // TODO save entries in txt file (BufferedWriter, BufferedReader)
-
-
 }
