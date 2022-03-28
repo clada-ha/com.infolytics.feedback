@@ -2,16 +2,12 @@ package com.infolytics.feedback.model;
 
 
 public abstract class EntriesDAO {
-    public void createEntry() {
-    }
+    public abstract void createEntry();
 
-    public void readEntry() {
-    }
+    public abstract void readEntry();
 
-    public void updateEntry() {
-    }
+    public abstract void updateEntry();
 
-    public void deleteEntry() {
-    }
+    public abstract void deleteEntry();
 
 }
