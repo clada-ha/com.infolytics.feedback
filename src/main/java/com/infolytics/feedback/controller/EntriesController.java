@@ -1,19 +1,14 @@
 package com.infolytics.feedback.controller;
 
-import com.infolytics.feedback.model.EmployeeEntries;
 import com.infolytics.feedback.model.Entry;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 public class EntriesController {
-    public void printEntries(EmployeeEntries prints) { // static?
-        System.out.println("employee ID: " + prints.getEmployeeIdentifier());
+    public void printEntries(Entry prints) { // TODO change/add logic
+        System.out.println("employee ID: " + prints.getIdentifierEmployee());
 
         for (Entry entry : prints.getEntries()) {
             LocalDate entryDate = entry.getEntryDate();
