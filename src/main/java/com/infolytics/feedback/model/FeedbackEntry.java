@@ -3,7 +3,7 @@ package com.infolytics.feedback.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FeedbackEntry extends Entry{
+public class FeedbackEntry extends Entry{ // TODO abstract class?
     private List<String> recipients;
 
     public FeedbackEntry() {

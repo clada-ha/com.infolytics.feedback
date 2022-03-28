@@ -1,4 +1,4 @@
 package com.infolytics.feedback.model;
 
-public class RegardingTime {
+public class RegardingTime extends FeedbackEntry{
 }

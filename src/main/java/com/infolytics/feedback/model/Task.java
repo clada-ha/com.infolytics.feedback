@@ -7,8 +7,8 @@ public class Task {
     // zu welcher Aufgabe gehoert Feedback?
     private String taskHeader;
     private String taskDescription;
-    private String taskCreator;
-    private String taskRecipient;
+    private Employee taskCreator; // TODO Employee oder String (employeeID)
+    private List<Employee> taskRecipient;
     private String URL;     // eineindeutige Identifikation; zB ueber GitLab, AufgabenWiki
     // wie implementieren? eigene (eindeutige) Zuordnung oder ohne Zuordnung >> Projektleitung ordnet selbst zu
 
@@ -52,12 +52,12 @@ public class Task {
         this.taskCreator = taskCreator;
     }
 
-    public String getTaskRecipient() {
+    public List<Employee> getTaskRecipient() {
         return taskRecipient;
     }
 
-    public void setTaskRecipient(String taskRecipient) {
-        this.taskRecipient = taskRecipient;
+    public void addTaskRecipient(Employee employee) {
+        this.taskRecipient.add(employee); // TODO sinnvoll, Employee als Parameter zu uebergeben?
     }
 
     public String getURL() {

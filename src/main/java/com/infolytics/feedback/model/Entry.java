@@ -19,7 +19,7 @@ public class Entry {
         // why do I need this default constructor to extend Diary- & FeedbackEntry?
     }
 
-    public Entry(String entry,LocalDate entryDate, LocalTime timestamp, boolean diaryMode) {   // besserer constructor? >>  Parameter: int year , int month, int day
+    public Entry(String entry, LocalDate entryDate, LocalTime timestamp, boolean diaryMode) {   // besserer constructor? >>  Parameter: int year , int month, int day
         this.entry = entry;
         this.entryDate = LocalDate.now();    // LocalDate.of(2022, 3, 16), LocalDate.of(2022, Month.March, 16)
         this.timestamp = timestamp;
@@ -34,47 +34,7 @@ public class Entry {
         this(entry, LocalDate.now(), LocalTime.now(), true); // TODO korrekte Zeit des Eintrags einfuegen, check SimpleDateFormat
     }
 
-    // METHODS // TODO write & retrieve: here or in EntriesController?
-    // write into local file
-    public void saveEntry(Entry entry) { //  useful parameter variable
-        String entryFilename = entry.getEntryDate().toString();
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("/home/claudia/Documents/projekte/feedback/test_dir/entry_" + entryFilename+ ".txt" ))) {
-            // TODO modify fileName >> add increment / date / ...
-            writer.write(entry.getEntry());
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-    }
 
-    // retrieve from local file
-    public void retrieveEntry(String entryFilename) {
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader("/home/claudia/Documents/projekte/feedback/test_dir/" + entryFilename + ".txt"));
-            String line;
-            while((line = reader.readLine()) != null) {
-                System.out.println(line);
-            }
-            reader.close();
-
-        } catch (IOException e) { // FileNotFoundException
-            e.printStackTrace();
-        }
-    }
-
-    //    public Entry retrieveEntry() {
-//        // TODO call entry from local file
-//        // try w resources?
-//    }
-//
-//    public void modifyEntry() {
-//        // TODO UPDATE saved entry in DB
-//        // TODO how to modify entries in txt files? (StringBuilder?)
-//        // use try w resources?
-//    }
-//
-//    public void removeEntry() {
-//        // TODO DELETE saved entry from DB
-//    }
 
     // getter, setter
     public String getEntry() {
